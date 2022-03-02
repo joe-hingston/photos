@@ -1,4 +1,6 @@
-import '../styles/globals.css'
+import React from 'react'
+// Import css files
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 function MyApp({ Component, pageProps }) {
   return <Component {...pageProps} />
