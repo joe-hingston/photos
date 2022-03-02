@@ -1,5 +1,6 @@
 import React, { useEffect, useState, useRef } from "react";
 import { Carousel } from "react-bootstrap";
+import Image from "next/image";
 
 export default function Home() {
   const [images, setImages] = useState([]);
@@ -16,16 +17,12 @@ export default function Home() {
 
   useEffect(() => {
     timer.current = setInterval(() => {
-      setIndex(index => index + 1)
+      setIndex((index) => index + 1);
     }, 5000);
     return () => {
       if (timer.current !== null) clearInterval(timer.current);
     };
   }, []);
-
-  useEffect(() => {
-    console.log(index);
-  }, [index]);
 
   return (
     <div style={{ backgroundColor: "rgba(0,0,0, .8)" }}>
