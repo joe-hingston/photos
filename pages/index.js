@@ -18,7 +18,7 @@ export default function Home() {
   useEffect(() => {
     timer.current = setInterval(() => {
       setIndex((index) => index + 1);
-    }, 5000);
+    }, 10000);
     return () => {
       if (timer.current !== null) clearInterval(timer.current);
     };
